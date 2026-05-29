@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="apearance.css">
+<h2>Login / Register</h2>
+<p>Login to proceed in my Youtube/Create Acount if don't have acount</p>
+<input id="username" placeholder="Username">
+<br><br>
+
+<input id="password" type="password" placeholder="Password">
+<br><br>
+
+<button class="login" onclick="login()">Login</button>
+<style>
+  .login{
+    font-size: 15px;
+    font-weight: bolder;
+    font-weight: 700;
+    padding: 0.3%;
+    background-color: transparent;
+    border-color: rgb(185, 177, 177);
+    color: rgb(9, 88, 94);
+    width: 5%;
+    text-shadow: 3px 3px 3px black;
+  }
+  .login:hover{
+    transform: scale(1.1);
+    background-color: darkred;
+  }
+</style>
+<p>Create Acount</p>
+<button id="button" onclick="register()">Register</button> 
+
+
+<link rel="stylesheet" href="apearance.css">
+
+<script>
+
+async function login() {
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  // ❌ prevent empty login
+  if (!username || !password) {
+    alert("Please enter username and password");
+    return;
+  }
+
+  const res = await fetch("http://localhost:3001/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username, password })
+  });
+
+  const data = await res.json();
+
+  alert(data.message);
+
+  // ✅ only redirect if backend says success
+  if (data.success === true) {
+    window.location.href = "dashboard.html";
+  }
+}
+
+async function register() {
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!username || !password) {
+    alert("Please enter username and password");
+    return;
+  }
+
+  const res = await fetch("http://localhost:3001/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username, password })
+  });
+
+  const data = await res.json();
+
+  alert(data.message);
+}
+
+</script>

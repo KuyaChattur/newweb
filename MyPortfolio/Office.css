@@ -1,0 +1,89 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(11, 5, 48);
+  color: white;
+  font-weight: 600;
+  align-items: center;
+  margin: 50px ;
+}
+
+h1{
+  font-size: 32px;
+}
+
+.office{
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  border: solid rgb(75, 95, 225);
+  color: blue;
+  align-items: center;
+  margin-top: 10px;
+  background-color: rgb(39, 33, 70);
+  border-radius: 15px;
+
+}
+
+.web{
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  border: solid rgb(75, 95, 225);
+  color: blue;
+  align-items: center;
+  margin-top: 10px;
+  background-color: rgb(39, 33, 70);
+  border-radius: 15px;
+}
+h2{
+  font-size: 30px;
+}
+
+.Program{
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  border: solid rgb(75, 95, 225);
+  color: blue;
+  align-items: center;
+  margin-top: 10px;
+  background-color: rgb(39, 33, 70);
+  border-radius: 15px;
+}
+h3{
+  font-size: 30px;
+}
+
+.Tol{
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  border: solid rgb(75, 95, 225);
+  color: blue;
+  align-items: center;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px solid black;
+}
+h4{
+  font-size: 30px;
+}
+
+header{
+  color: rgba(152, 197, 237, 0.864);
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+span{
+  color: rgba(7, 37, 233, 0.864);
+}

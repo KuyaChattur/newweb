@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="apearance.css">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-image:url("../BlackHat.jpg");
+      color:white;
+    }
+
+    .navbar{
+      font-weight: 600;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+      background:transparent;
+      box-shadow:5px 15px 10px rgba(0,0,0,0.4);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    .nav-links a{
+      text-shadow: 5px 15px 10px black;
+      display: inline-block;
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+      transform: scale(2.1);
+      text-shadow: 5px 15px 10px black;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      flex-direction:column;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:15px;
+    }
+
+    .hero span{
+      color:#38bdf8;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:700px;
+      line-height:1.6;
+      color:#cbd5e1;
+    }
+
+    .buttons{
+      margin-top:30px;
+    }
+
+    .btn{
+      padding:12px 28px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+      margin:10px;
+      transition:0.3s;
+    }
+
+    .btn-primary{
+      font-weight: 600;
+      box-shadow: 5px 15px 10px black;
+      background:transparent;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:transparent;
+      transform: scale(1.1);
+    }
+
+    .btn-danger{
+      font-weight: 700;
+      background:transparent;
+      color:white;
+      box-shadow: 5px 15px 10px black;
+    }
+
+    .btn-danger:hover{
+      background:transparent;
+      transform: scale(1.1);
+    }
+
+    .card-section{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      padding:50px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background:transparent;
+      width:280px;
+      padding:25px;
+      border-radius:15px;
+      transition:0.3s;
+      box-shadow: 10px 15px 10px black;
+      text-shadow: 5px 15px 10px black;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      line-height:1.5;
+    }
+ @media (max-width: 768px){
+
+  .navbar{
+    flex-direction: column;
+    padding:20px;
+    text-align:center;
+  }
+
+  .nav-links{
+    margin-top:15px;
+  }
+
+  .nav-links a{
+    margin:10px;
+    display:inline-block;
+    font-size:15px;
+  }
+
+  .hero{
+    height:auto;
+    padding:60px 20px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:16px;
+    max-width:100%;
+  }
+
+  .buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .btn{
+    width:80%;
+    max-width:250px;
+  }
+
+  .card-section{
+    padding:20px;
+    gap:20px;
+  }
+
+  .card{
+    width:100%;
+    max-width:350px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="logo">My Portfolio</div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="../MyPortfolio/Skills.html">Projects</a>
+      <a href="#">About me</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>Hello, I'm <span>Jason</span> 👋</h1>
+
+    <p>
+      Welcome to my portfolio website.
+      I am learning web development using HTML, CSS,
+      JavaScript, Node.js, and Express.js.
+    </p>
+
+    <div class="buttons">
+      <button class="btn btn-primary">
+        View Projects
+      </button>
+
+      <button class="btn btn-danger" onclick="logout()">
+        Logout
+      </button>
+    </div>
+  </section>
+
+  <section class="card-section">
+
+    <div class="card">
+      <h2>Frontend</h2>
+      <p>
+        Creating responsive websites using
+        HTML, CSS, and JavaScript.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Backend</h2>
+      <p>
+        Building backend systems using
+        Node.js and Express.js.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Database</h2>
+      <p>
+        Learning SQLite and MySQL
+        for storing user data.
+      </p>
+    </div>
+
+  </section>
+
+  <script>
+    function logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
